@@ -6,21 +6,37 @@ import TaskHookForm from "./TaskHookForm";
 import PeopleForm from "./PeopleForm";
 import { initialTasks, initialTeam } from "./data";
 
-
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const [team, setTeam] = useState(initialTeam);
 
   function handleTaskSubmit(yeniTask) {
-    setTasks([yeniTask, ...tasks])
+    setTasks([yeniTask, ...tasks]);
   }
-
   function handlePeopleSubmit(yeniKisi) {
-    setTeam([...team, yeniKisi])
+    setTeam([...team, yeniKisi]);
   }
 
   function handleComplete(id) {
-    console.log("tamamlama fonksiyonunu buraya yazın")
+    console.log("tamamlama fonksiyonunu buraya yazın");
+
+    // setTasks(
+    //   tasks.map((item) => {
+    //     if (id === item.id) {
+    //       item.status = "yapıldı";
+    //     }
+    //     return item;
+    //   })
+    // );
+    setTasks(
+      tasks.map((item) => {
+        console.log(id);
+        if (item.id === id) {
+          return { ...item, status: "yapıldı" };
+        }
+        return item;
+      })
+    );
   }
 
   return (
@@ -59,7 +75,6 @@ function App() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

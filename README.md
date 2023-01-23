@@ -17,7 +17,7 @@ Görev takip sistemleri, bir proje içerisinde yapılması gerekenleri küçük 
 ## Giriş
 
 Projede, `Yapılacaklar` listesine yeni görev eklenmesini sağlayan ve görevleri yapması beklenen insan grubuna yeni üyeler eklemekte kullanılan 2 adet form bulunuyor. Yeni görev ekleme formunda (TaskForm), önceki projelerde görmüş olduğumuz gibi form değerleri state içerisinde tutuluyor ve Yup ile validation yapılıyor. Amacımız bu formu react-hook-form ile yeniden yapmak.
- 
+
 - `App.js` içerisinde comment içerisine alınmış olan `TaskForm` componentını aktif hale getirin ve nasıl çalıştığını inceleyin.
 - react-hook-form kütüphanesinin dokümantasyon sayfasını ve özellikle [form alanı oluşturma aracını](https://react-hook-form.com/form-builder/) inceleyin ve o aracı kullanarak `TaskForm` componentını yeniden oluştururken kullanabileceğiniz kodlar üretmeye çalışın.
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form) kütüphanesini projeye ekleyin.
@@ -39,7 +39,8 @@ Projede, `Yapılacaklar` listesine yeni görev eklenmesini sağlayan ve görevle
 
 ### Görev 2: Proje Gereksinimleri
 
-- Yeni görev ekleme formu, react-hook-form hookları kullanılarak yazılmalı, ekstra state kullanılmamalı.
+    - Yeni görev ekleme formu, react-hook-form hookları kullanılarak yazılmalı, ekstra state kullanılmamalı.
+
 - Kullanılan kişi listesi ve görevlere ait tüm veriler `<App />` içerisinden kullanılmalı.
 - `<App />` state verilerini değiştirecek olan görevi tamamlama fonksiyonu `App.js` içinde oluşturulmalı ve `Task` componentına gönderilmeli.
 - Görev tamamlama ve yeni görev ekleme sonrasında birbirlerinden farklı ve bilgilendirici mesajlar gösterilmeli.
