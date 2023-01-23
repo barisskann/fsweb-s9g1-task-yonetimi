@@ -1,8 +1,9 @@
 import { nanoid } from "nanoid";
 import React from "react";
 import { useForm } from "react-hook-form";
-
+import { ToastContainer, toast } from "react-toastify";
 export default function TaskHookForm({ kisiler, submitFn }) {
+  const note = () => toast("BASARILIII");
   const {
     register,
     handleSubmit,
@@ -17,6 +18,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
   });
   const onSubmit = (data) => {
     let id = nanoid();
+    note();
     submitFn({ ...data, id });
   };
   return (
